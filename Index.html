@@ -21,9 +21,11 @@
             <br> 
 
         <input type="button" name="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
+
+        <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-5" >
     </form>
 
-    <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-5" >
+    <p id="display"></p>
 
     <script>
         let attempt_counter = 0;
@@ -33,7 +35,7 @@
             let pwd = document.getElementById("pwd").value;
             let granted = "Welcome " + username + "!";
             let denied = "Access denied. Account locked after 3 attempts!";
-        }
+        
 
 
 
@@ -53,13 +55,13 @@
                 "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
             break; // stop loop for this click
         }
-
+          }
         if (attempt_counter >= 3) {
                 alert(denied);
                 document.getElementById("loginBTN").disabled = true; // disable button
-            }
+           
         }
-
+    }
     </script>
     
 </body>

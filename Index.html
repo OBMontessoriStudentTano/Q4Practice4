@@ -15,20 +15,37 @@
         align-items: center;
         margin: 0;
         flex-direction: column;
-        background: linear-gradient(to bottom right, #12063b, #09555c);
+        background-image: url("https://i.pinimg.com/736x/5e/2d/e4/5e2de404861dbf7a30ce923d07ca1fbe.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
     #form-box{
-            background: rgba(250, 250, 250, 0.80);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
-            width: 425px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);   
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.20);
+            backdrop-filter: blur(15px);
+            padding: 35px;
+            border-radius: 20px;
+            width: 410px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.5);   
         }
 
-    h2 {
+    #form-box2{
+        background: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(15px);
+        padding: 35px;
+        border-radius: 20px;
+        width: 410px;
+        box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+    }
+
+    h1 {
         text-align: center;
+        font-size: 25px;
         font-weight: bold;
+        color: black;
         margin-bottom: 20px;
     }
 
@@ -41,33 +58,56 @@
         box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
 
+    .btn-info {
+        background-color: #899287;
+        border: none;
+        color: white;
+        transition: 0.2s ease;
+        border: 2px solid black;
+    }
+
+    .btn-info:hover {
+        background-color: #6c7969;
+        border: 2px solid white;
+        box-shadow: 0 0 10px #aab4a9;
+    }
+
     </style>
 
 </head>
 <body>
-
-    <div id="form-box">
-         <h2>Hi there! Log in to your account!</h2>
+    <div id="form-box2">
 
     <br>
 
+
     <form>
-        <h2>Login Form</h2>
+         <h1>Welcome to our login form! Login in:</h1>
+    </form>
+    </div>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <div id="form-box">
+
+    <form>
         <label for="uname">Username</label>
             <br>
             <input type="text" id="uname" class="form-control" placeholder="Enter here" required>
             <br>
 
-        <label for="pwd">Username</label>
+        <label for="pwd">Password</label>
             <br>
             <input type="text" id="pwd" class="form-control" placeholder="Enter here" required>
             <br> 
 
         <input type="button" name="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
-
         <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-5" >
     </form>
-        <p id="display" class="text-center display-6"></p>
     </div>
 
     <p id="display"></p>
